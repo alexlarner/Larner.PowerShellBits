@@ -1,0 +1,5 @@
+Find,ReplacePattern,Description
+### EXAMPLE,### Example,Standardize the capitalization of Example between the ones from the code (all caps) to the placeholders generated for the functions without examples in the code
+(### Example \d+\r\n```)(?!powershell),$1PowerShell,Mark example codeblocks as PowerShell code because the ones pulled from existing code aren’t marked
+```(?=\r\n\S),```text,Mark the unidentified codeblocks (i.e. Syntax blocks) as text
+^(#+ .+)(?=\r\n\S),$1\r\n,Add blank line after headers in PlatyPS generated Markdown
